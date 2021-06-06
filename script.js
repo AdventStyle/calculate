@@ -16,6 +16,15 @@ window.onload = (function () {
     if(currentOperator === "+"){
      result = +prevValue + +input.innerText;
     }
+    if(currentOperator === "-"){
+      result = +prevValue - +input.innerText;
+    }
+    if(currentOperator === "*"){
+      result = +prevValue * +input.innerText;
+    }
+    if(currentOperator === "/"){
+      result = +prevValue / +input.innerText;
+    }
     input.innerText = result;
     currentOperator = "";
   }
@@ -46,12 +55,21 @@ window.onload = (function () {
           console.log(prevValue, currentOperator);
           break;
         case '-':
+          setPrevValue();
+          clear();
+          setCurrentOperator("-");
           console.log(text);
           break;
         case '*':
+          setPrevValue();
+          clear();
+          setCurrentOperator("*");
           console.log(text);
           break;
         case '/':
+          setPrevValue();
+          clear();
+          setCurrentOperator("/");
           console.log(text);
           break;
         // case 'C':
