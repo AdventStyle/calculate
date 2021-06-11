@@ -24,6 +24,15 @@ window.onload = function () {
     if (currentOperator === "/") {
       result = +prevValue / +currentValue;
     }
+    if(currentOperator === "-"){
+      result = +prevValue - +input.innerText;
+    }
+    if(currentOperator === "*"){
+      result = +prevValue * +input.innerText;
+    }
+    if(currentOperator === "/"){
+      result = +prevValue / +input.innerText;
+    }
     input.innerText = result;
     // currentOperator = "";
     prevValue = result;
