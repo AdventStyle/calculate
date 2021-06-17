@@ -73,7 +73,7 @@ window.onload = function () {
 
       let targetText = e.target.innerText;
       if(targetText === 0){
-          //  if()
+          
       }
       let newText = text + targetText;
 
@@ -113,6 +113,15 @@ window.onload = function () {
     }else if(e.target.className === "delete"){
       console.log("delete",input.innerText)
       input.innerText = input.innerText.slice(0, input.innerText.length - 1);
+      if (input.innerText == 0);
+    }else if(e.target.className === "nol"){
+      let text = input.innerText;
+      if(text.indexOf("0") === -1 ){
+        if(input.innerText.length < 1){
+          input.innerText = "0";
+        }
+        input.innerText = input.innerText + "0"
+      }
     }
   });
 };
